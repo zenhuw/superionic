@@ -6,16 +6,16 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-<ion-list>
-  <div *ngFor="let menu of menus">
-    <div ion-item class="item-stable">
-      <div (click)="toggleGroup(menu)"> {{menu.name}}</div>
-      <expandable [expandHeight]="itemExpandHeight * menu.subMenu.length" [expanded]="menu.expanded"> 
-          <button *ngFor='let subMenus of menu.subMenu' ion-item >
+  <ion-list>
+    <div *ngFor="let menu of menus">
+      <div ion-item class="item-stable">
+        <div (click)="toggleGroup(menu)"> {{menu.name}}</div>
+        <expandable [expandHeight]="itemExpandHeight * menu.subMenu.length" [expanded]="menu.expanded">
+          <button (click)="gotoPage()" *ngFor='let subMenus of menu.subMenu' ion-item>
             &nbsp;{{subMenus}}
           </button>
-      </expandable>
+        </expandable>
+      </div>
     </div>
-  </div>
-</ion-list>
+  </ion-list>
 </ion-content>
