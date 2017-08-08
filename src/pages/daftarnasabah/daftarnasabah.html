@@ -7,12 +7,35 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>daftarnasabah</ion-title>
+    
+    <ion-title>Daftar Nasabah</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+
+
+<ion-list>
+
+<ion-item> 
+ <ion-label color="primary">Nama Lengkap:</ion-label>
+  <ion-input placeholder="Contoh: Reza" type="text" clearInput='true'></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label color="primary">Email Address:</ion-label>
+  <ion-input placeholder="email@address.com" type="email" clearInput='true'></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label color="primary">No Handphone:</ion-label>
+  <ion-input placeholder="08138232xxx" type="tel" clearInput='true'></ion-input>
+</ion-item>
+
+</ion-list>
+
+<div>
+<button ion-button full (click)="presentLoadingDefault()">Daftar</button>
+</div>
+
 
 </ion-content>

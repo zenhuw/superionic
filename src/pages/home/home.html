@@ -9,10 +9,10 @@
   <ion-list>
     <div *ngFor="let menu of menus">
       <div ion-item class="item-stable">
-        <div (click)="toggleGroup(menu)"> {{menu.name}}</div>
+        <div (click)="toggleGroup(menu)"> {{menu.name}} </div>
         <expandable [expandHeight]="itemExpandHeight * menu.subMenu.length" [expanded]="menu.expanded">
-          <button (click)="gotoPage()" *ngFor='let subMenus of menu.subMenu' ion-item>
-            &nbsp;{{subMenus}}
+          <button (click)="gotoPage(subMenus.link)" *ngFor='let subMenus of menu.subMenu' ion-item>
+            &nbsp;{{subMenus.name}}
           </button>
         </expandable>
       </div>
