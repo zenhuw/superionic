@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-
-=======
 import {
   Component, OnChanges, Input,
   trigger, state, animate, transition, style
@@ -10,18 +5,12 @@ import {
 import { NavController } from 'ionic-angular';
 
 
->>>>>>> 1166c332c76e4a8528db2475b1abd0c52745ad15
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-<<<<<<< HEAD
-  constructor(public navCtrl: NavController) {
-
-  }
-=======
 
   menus: Array<{ name: string, subMenu: string[], expanded: boolean }>;
 
@@ -70,6 +59,5 @@ export class HomePage {
   }
 
 
->>>>>>> 1166c332c76e4a8528db2475b1abd0c52745ad15
 
 }
