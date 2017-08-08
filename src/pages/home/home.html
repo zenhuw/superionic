@@ -1,6 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
+<<<<<<< HEAD
       Ionic Blank
     </ion-title>
   </ion-navbar>
@@ -12,3 +13,23 @@
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
   </p>
 </ion-content>
+=======
+      Program Irwan
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <div *ngFor="let menu of menus">
+      <div ion-item class="item-stable">
+        <div (click)="toggleGroup(menu)"> {{menu.name}}</div>
+        <expandable [expandHeight]="itemExpandHeight * menu.subMenu.length" [expanded]="menu.expanded">
+          <button (click)="gotoPage()" *ngFor='let subMenus of menu.subMenu' ion-item>
+            &nbsp;{{subMenus}}
+          </button>
+        </expandable>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>
+>>>>>>> 1166c332c76e4a8528db2475b1abd0c52745ad15
